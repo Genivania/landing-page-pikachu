@@ -1,4 +1,4 @@
-/*Reset*/ 
+/*Reset*/
 
 *{
     padding: 0;
@@ -10,7 +10,6 @@
     --primary-color:  #F5CF06;
     --secondary-color: #8E4106;
     --space-default: 70px;
-
 }
 
 body{
@@ -20,23 +19,84 @@ body{
     flex-direction: column;
     padding-top: var(--space-default);
     padding-bottom: 24px;
-
-
+    font-family: 'Righteous', cursive;
 }
 
 header{
     height: 48px;
-    background-color: blueviolet;
-
-   
+}
+.logo {
+    margin-left: var(--space-default);
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    text-decoration: none;
+    color: var(--secondary-color);
+    font-size: 32px;
 }
 
 main{
-    background-color: rgb(60, 13, 228);
     flex-grow:1;
+    display: grid;
+    grid-template-columns: repeat(12,1fr);
+    margin: 0px var(--space-default); 
 }
+.title{
+    position: relative;
+    grid-column: 1/-1;
+    place-self: center;
+
+}
+.title__text{
+    font-size: 20vw;
+    color: #FFFFFF;
+}
+.title__transparente{
+    position: absolute;
+    font-size: 27vw;
+    top: -50%;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #fff5;
+    z-index: -1;
+}
+.description{
+    grid-column: 1/7;
+    place-self: center start;
+    color: var(--secondary-color);
+}
+.description__title{
+    font-size: 64px;
+}
+.description__text{
+    font-size: 20px;
+    width: 500px;
+}
+.action{
+    grid-column: 7/-1;
+    place-self: center end;
+    height: 100px;
+    width: 411px;
+    background-color: var(--secondary-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 48px;
+    color: #fff;
+    text-decoration: none;
+}
+
 footer{
+    font-family: 'Righteous', cursive;
+    text-align: center;
+    color: #FFFFFF;
     
-    background-color: rgb(76, 236, 236);
-    
+}
+.pikachu-image{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    z-index: 1;
+
 }
