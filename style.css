@@ -32,7 +32,7 @@ header{
     gap: 16px;
     text-decoration: none;
     color: var(--secondary-color);
-    font-size: 32px;
+    font-size: 2rem;
 }
 
 main{
@@ -66,10 +66,10 @@ main{
     color: var(--secondary-color);
 }
 .description__title{
-    font-size: 64px;
+    font-size: 4rem;
 }
 .description__text{
-    font-size: 20px;
+    font-size: 1.2rem;
     width: 500px;
 }
 .action{
@@ -81,7 +81,7 @@ main{
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 48px;
+    font-size: 3rem;
     color: #fff;
     text-decoration: none;
 }
@@ -89,8 +89,7 @@ main{
 footer{
     font-family: 'Righteous', cursive;
     text-align: center;
-    color: #FFFFFF;
-    
+    color: var(--secondary-color); 
 }
 .pikachu-image{
     position: absolute;
@@ -98,5 +97,59 @@ footer{
     left: 50%;
     transform: translate(-50%,-50%);
     z-index: 1;
+}
+
+/* TABLET*/
+
+@media (max-width: 960px){
+    :root{
+        --space-default: 30px;
+} 
+main{
+    grid-template-columns: 1fr;
+}
+.pikachu-image{
+    transform: translate(-50%,-60%);
 
 }
+.title{
+    place-self: start center;
+}
+.description{
+    grid-row: 2;
+    grid-column: 1;
+    place-self: center;
+    text-align: center;
+}
+.action{
+    grid-row: 2;
+    grid-column: 1;
+    place-self: end center;
+}
+}
+
+footer{
+    display: none;
+}
+
+/* MOBILE */
+@media (max-width: 640px){
+    .pikachu-image{
+        width: 90vw;
+        transform: translate(-50%, -50%);
+    }
+    .title{
+       transform: translateY(30%);
+    }
+    .description__title{
+        font-size: 10vw;
+    }
+    .description__text{
+        display: none;
+    }
+    .action{
+        width: 100%;
+    }
+}
+
+    
